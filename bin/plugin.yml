@@ -1,0 +1,14 @@
+name: OrchestrionsLite
+main: me.desertdweller.orchestrionslite.OrchestrionsLite
+version: 0.5
+author: Desertdweller
+api-version: 1.13
+depend: [ItemNBTAPI]
+softdepend: [Brewery]
+commands:
+   giveinstrument:
+      description: The command to create an instrument.
+      usage: /giveinstrument <Name> <Sound> <Material> [Octave Difference]
+   setmaterial:
+      description: Sets the material in your offhand, (and adds its nbt data), to the item in your main hand.
+      usage: /setmaterial (while holding items in both hands)
