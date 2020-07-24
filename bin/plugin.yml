@@ -1,6 +1,6 @@
 name: OrchestrionsLite
 main: me.desertdweller.orchestrionslite.OrchestrionsLite
-version: 0.5
+version: 0.5.1
 author: Desertdweller
 api-version: 1.13
 depend: [ItemNBTAPI]

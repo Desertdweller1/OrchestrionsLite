@@ -82,6 +82,8 @@ public class BasicInstrument implements Listener{
 		if(nbti.hasKey("Plugin") && nbti.getString("Plugin").equals("Orchestrions") && nbti.hasKey("Material") && nbti.getString("Material").equals("Instrument")) {
 			//Playing instrument
 			if(e.getAction().equals(Action.RIGHT_CLICK_AIR) || e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
+				InstrumentUseEvent event = new InstrumentUseEvent(e.getPlayer());
+				plugin.getServer().getPluginManager().callEvent(event);
 				e.setCancelled(true);
 				//float soundPitch = ((180 - (e.getPlayer().getLocation().getPitch() + 90)) / 120) + 0.5f; //Infinite note values
 				float degreesPerNote = (180f / (float) (NoteFinder.getNoteAmount() - 1));
@@ -95,7 +97,6 @@ public class BasicInstrument implements Listener{
 				int noteID = (int) (noteAngle/degreesPerNote);
 				if(nbti.hasKey("Register")) {
 					noteID = (int) ((float) (noteID/2) + (float)(curOctave + 1)*(float) (noteID/2));
-					System.out.println(noteID);
 				}
 				float soundPitch = NoteFinder.getNotePitch(curOctave, noteID);
 

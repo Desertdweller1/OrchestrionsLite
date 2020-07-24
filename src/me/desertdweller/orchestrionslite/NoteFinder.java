@@ -17,7 +17,6 @@ public class NoteFinder {
 	}
 	
 	public static float getNotePitch(int octave, int id) {
-		System.out.println((float) Math.pow(2, (float) (id+octave*octaveNotes.length) /(float) (octaveNotes.length)));
 		return (float) Math.pow(2, (float) (id+octave*octaveNotes.length) /(float) (octaveNotes.length));
 	}
 	
