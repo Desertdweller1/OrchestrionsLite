@@ -3,7 +3,7 @@ main: me.desertdweller.orchestrionslite.OrchestrionsLite
 version: 0.5.3
 author: Desertdweller
 api-version: 1.16
-depend: [ItemNBTAPI]
+depend: [NBTAPI]
 softdepend: [Brewery]
 commands:
    giveinstrument:
